@@ -28,10 +28,16 @@ public class Bank {
         accounts.remove(acc);
         System.out.println("Closed account for " + acc.getAccountHolder());
     }
-
+    
+    // list accounts method (display)
     public void listAccounts() {
         for (Account acc : accounts) {
             System.out.println(acc.getAccountNumber() + ": " + acc.getAccountHolder());
         }
     }
+
+    // get account (to reuse)
+    public ArrayList<Account> getAccounts() {
+        return accounts;
+    }    
 }
